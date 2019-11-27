@@ -15,11 +15,11 @@ export class AppComponent implements OnInit {
   pdfs:any[];
 
   ngOnInit(){
-    this.pdfs = this.pdfService.getPDFs();
+    this.pdfs = this.pdfService.getPDFs().unredacted;
   }
 
   getUrl(pdf:any){
-    return "assets/pdf/" + pdf.url;
+    return "assets/pdf/unredacted/" + pdf.url;
   }
 
   setPdf(pdf:any){
